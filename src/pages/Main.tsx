@@ -11,7 +11,7 @@ const pages: React.FC = () => {
   const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
-    fetch('http://api.github.com/orgs/rocketseat/members').then(response => {
+    fetch('http://api.github.com/orgs/facebook/members').then(response => {
       response.json().then(data => {
         setMembers(data);
       })
