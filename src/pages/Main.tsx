@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { View, FlatList, Image, Text, StyleSheet } from 'react-native';
 
-// import { Container } from './styles';
 interface Member {
   login: string;
   avatar_url: string;
 }
 
-const pages: React.FC = () => {
+const Main: React.FC = () => {
   const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
-    fetch('http://api.github.com/orgs/facebook/members').then(response => {
+    fetch('http://api.github.com/orgs/rocketseat/members').then(response => {
       response.json().then(data => {
         setMembers(data);
       })
@@ -53,4 +52,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default pages;
+export default Main;

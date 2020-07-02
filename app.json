@@ -25,7 +25,8 @@
     "sdkVersion": "38.0.0",
     "platforms": [
       "android",
-      "ios"
+      "ios",
+      "web"
     ]
   }
 }
